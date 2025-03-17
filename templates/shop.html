@@ -1,0 +1,292 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+
+    <title>PC HAVEN</title>
+  </head>
+  <body>
+    <nav class="nav container">
+      <a href="{% url 'index' %}" >
+        <img
+          class="nav__logo-img"
+          src="{% static 'img/logo.png' %}"
+          alt="website logo"
+        />
+      </a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="{% url 'index' %}" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="{% url 'shop' %}"class="nav__link">Shop</a>
+            </li>
+          <!--Account Deleted-->
+            </li>
+            <li class="nav__item">
+              <a href="compare.html" class="nav__link">Navbar 1</a>
+            </li>
+            <li class="nav__item">
+              <a href="login-register.html" class="nav__link">Navbar 2</a>
+            </li>
+          </ul>
+          </li>
+          <!--Extra Tabs deleted-->
+        </ul>
+        <div class="header__search">
+          <input
+            type="text"
+            placeholder="Search For Items..."
+            class="form__input"
+          />
+          <button class="search__btn">
+            <img src="{% static 'img/search.png' %}" alt="search icon" />
+          </button>
+        </div>
+      </div>
+      <div class="header__user-actions">
+        <a href="{% url 'wishlist'  %}"class="header__action-btn" title="Wishlist">
+          <img src="{% static 'img/icon-heart.png' %}" alt="" />
+          <span class="count">0</span>
+        </a>
+        <a href="{% url 'cart' %}"class="header__action-btn" title="Cart">
+          <img src="{% static 'img/icon-cart.png' %}" alt="" />
+          <span class="count">0</span>
+        </a>
+        <a href="{% url 'login' %}" class="header__action-btn" title="Login/Sign up">
+          <img src="{% static 'img/icon-acc.png' %}" alt="" />
+        </a>
+      </div>
+    </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      
+
+      <!--=============== PRODUCTS ===============-->
+      <section class="products container section--lg">
+        <p class="total__products">We found <span>4</span> items for you!</p>
+        <div class="products__container grid">
+            <div class="product__item">
+                <div class="product__banner">
+                    <a href="details.html" class="product__images">
+                        <img src="{% static 'img/product-1-1.jpg' %}" alt="" class="product__img default" />
+                        <img src="{% static 'img/product-1-2.jpg' %}" alt="" class="product__img hover" />
+                    </a>
+                    <div class="product__actions">
+                        <a img src="{% static 'img/icon-cart.svg' %}" class="action__btn" aria-label="Quick View"><i class="fi fi-rs-eye"></i></a>
+                        <a href="#" class="action__btn" aria-label="Add to Wishlist"><i class="fi fi-rs-heart"></i></a>
+                        <a href="#" class="action__btn" aria-label="Compare"><i class="fi fi-rs-shuffle"></i></a>
+                    </div>
+                    <div class="product__badge light-pink">Hot</div>
+                </div>
+                <div class="product__content">
+                    <span class="product__category">PC / Laptops</span>
+                    <a href="details.html"><h3 class="product__title">Foldable Laptop</h3></a>
+                    <div class="product__rating">
+                        <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+                        <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+                    </div>
+                    <div class="product__price flex">
+                        <span class="new__price">$238.85</span>
+                        <span class="old__price">$245.8</span>
+                    </div>
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart"><i class="fi fi-rs-shopping-bag-add"></i></a>
+                </div>
+            </div>
+            <div class="product__item">
+                <div class="product__banner">
+                    <a href="details.html" class="product__images">
+                        <img src="{% static 'img/product-2-1.jpg' %}" alt="" class="product__img default" />
+                        <img src="{% static 'img/product-2-2.jpg' %}" alt="" class="product__img hover" />
+                    </a>
+                    <div class="product__actions">
+                        <a href="#" class="action__btn" aria-label="Quick View"><i class="fi fi-rs-eye"></i></a>
+                        <a href="#" class="action__btn" aria-label="Add to Wishlist"><i class="fi fi-rs-heart"></i></a>
+                        <a href="#" class="action__btn" aria-label="Compare"><i class="fi fi-rs-shuffle"></i></a>
+                    </div>
+                    <div class="product__badge light-green">Hot</div>
+                </div>
+                <div class="product__content">
+                    <span class="product__category">Cabinet</span>
+                    <a href="details.html"><h3 class="product__title">PC Cabinet</h3></a>
+                    <div class="product__rating">
+                        <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+                        <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+                    </div>
+                    <div class="product__price flex">
+                        <span class="new__price">$238.85</span>
+                        <span class="old__price">$245.8</span>
+                    </div>
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart"><i class="fi fi-rs-shopping-bag-add"></i></a>
+                </div>
+            </div>
+            <div class="product__item">
+                <div class="product__banner">
+                    <a href="details.html" class="product__images">
+                        <img src="{% static 'img/product-3-1.jpg' %}" alt="" class="product__img default" />
+                        <img src="{% static 'img/product-3-2.jpg' %}" alt="" class="product__img hover" />
+                    </a>
+                    <div class="product__actions">
+                        <a href="#" class="action__btn" aria-label="Quick View"><i class="fi fi-rs-eye"></i></a>
+                        <a href="#" class="action__btn" aria-label="Add to Wishlist"><i class="fi fi-rs-heart"></i></a>
+                        <a href="#" class="action__btn" aria-label="Compare"><i class="fi fi-rs-shuffle"></i></a>
+                    </div>
+                    <div class="product__badge light-orange">Hot</div>
+                </div>
+                <div class="product__content">
+                    <span class="product__category">Gaming Cabinet</span>
+                    <a href="details.html"><h3 class="product__title">RGB Cabinet</h3></a>
+                    <div class="product__rating">
+                        <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+                        <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+                    </div>
+                    <div class="product__price flex">
+                        <span class="new__price">$238.85</span>
+                        <span class="old__price">$245.8</span>
+                    </div>
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart"><i class="fi fi-rs-shopping-bag-add"></i></a>
+                </div>
+            </div>
+            <div class="product__item">
+                <div class="product__banner">
+                    <a href="details.html" class="product__images">
+                        <img src="{% static 'img/product-4-1.jpg' %}" alt="" class="product__img default" />
+                        <img src="{% static 'img/product-4-2.jpg' %}" alt="" class="product__img hover" />
+                    </a>
+                    <div class="product__actions">
+                        <a href="#" class="action__btn" aria-label="Quick View"><i class="fi fi-rs-eye"></i></a>
+                        <a href="#" class="action__btn" aria-label="Add to Wishlist"><i class="fi fi-rs-heart"></i></a>
+                        <a href="#" class="action__btn" aria-label="Compare"><i class="fi fi-rs-shuffle"></i></a>
+                    </div>
+                    <div class="product__badge light-blue">Hot</div>
+                </div>
+                <div class="product__content">
+                    <span class="product__category">Gaming PC Set</span>
+                    <a href="details.html"><h3 class="product__title">Gaming PC</h3></a>
+                    <div class="product__rating">
+                        <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+                        <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+                    </div>
+                    <div class="product__price flex">
+                        <span class="new__price">$238.85</span>
+                        <span class="old__price">$245.8</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+   <!--Deleted-->
+    </main>
+
+    <!--Deleted-->
+         <footer class="footer container">
+      <div class="footer__container grid">
+        <div class="footer__content">
+          <a href="index.html" class="footer__logo">
+   
+          </a>
+          <h4 class="footer__subtitle">Contact</h4>
+          <p class="footer__description">
+            <span>Address:</span> Akash @ Marian Collge , Kutikaanam
+          </p>
+          <p class="footer__description">
+            <span>Phone:</span> +123-456-7890
+          </p>
+          <p class="footer__description">
+            <span>Hours:</span> 10:00 - 18:00, Mon - Sat
+          </p>
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Follow Me</h4>
+            <div class="footer__links flex">
+              <a href="#">
+                <img
+                  src="./assets/img/icon-facebook.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-twitter.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-instagram.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-pinterest.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-youtube.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Address</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">About Us</a></li>
+            <li><a href="#" class="footer__link">Delivery Information</a></li>
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__link">Terms & Conditions</a></li>
+            <li><a href="#" class="footer__link">Contact Us</a></li>
+            <li><a href="#" class="footer__link">Support Center</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">My Account</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Sign In</a></li>
+            <li><a href="#" class="footer__link">View Cart</a></li>
+            <li><a href="#" class="footer__link">My Wishlist</a></li>
+            <li><a href="#" class="footer__link">Track My Order</a></li>
+            <li><a href="#" class="footer__link">Help</a></li>
+            <li><a href="#" class="footer__link">Order</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Secured Payed Gateways</h3>
+         <img
+  src="{% static 'img/payment-method.png' %}"
+  alt=""
+  class="payment__img"
+/>
+        </div>
+      </div>
+    
+    </footer>
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

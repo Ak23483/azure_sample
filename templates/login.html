@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FLATICON ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+
+    <title>PC HAVEN - Login</title>
+  </head>
+  <body>
+    <nav class="nav container">
+      <a href="{% url 'index' %}">
+        <img
+          class="nav__logo-img"
+          src="{% static 'img/logo.png' %}"
+          alt="website logo"
+        />
+      </a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="{% url 'index' %}" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="{% url 'shop' %}" class="nav__link">Shop</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Navbar1</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Navbar2</a>
+          </li>
+        </ul>
+        <div class="header__search">
+          <input
+            type="text"
+            placeholder="Search For Items..."
+            class="form__input"
+          />
+          <button class="search__btn">
+            <img src="{% static 'img/search.png' %}" alt="search icon" />
+          </button>
+        </div>
+      </div>
+      <div class="header__user-actions">
+        <a href="{% url 'wishlist'  %}" class="header__action-btn" title="Wishlist">
+          <img src="{% static 'img/icon-heart.png' %}" alt="" />
+          <span class="count">0</span>
+        </a>
+        <a href="{% url 'cart' %}" class="header__action-btn" title="Cart">
+          <img src="{% static 'img/icon-cart.png' %}" alt="" />
+          <span class="count">0</span>
+        </a>
+        <a href="{% url 'login' %}" class="header__action-btn" title="Login/Sign up">
+          <img src="{% static 'img/icon-acc.png' %}" alt="" />
+        </a>
+      </div>
+    </nav>
+
+   <!--=============== LOGIN SECTION ===============-->
+   <section class="login-register section--lg">
+    <div class="login-register__container container grid">
+        <div class="login">
+            <h3 class="section__title">Login</h3>
+            <form method="POST" class="form grid">
+                {% csrf_token %}
+                
+                <!-- Username Field -->
+                {{ form.username }}
+                {% if form.username.errors %}
+                    <div class="form-errors">
+                        {% for error in form.username.errors %}
+                            <span class="error">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                
+                <!-- Password Field -->
+                {{ form.password }}
+                {% if form.password.errors %}
+                    <div class="form-errors">
+                        {% for error in form.password.errors %}
+                            <span class="error">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                <div class="form__btn">
+                    <button type="submit" class="btn">Login</button>
+                </div>
+                
+                <br>
+                <div class="form__links">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <br>
+                    <br>
+                    <p>New user? <a href="{% url 'register' %}">Create Account</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

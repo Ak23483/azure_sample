@@ -1,0 +1,308 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+
+    <title>PC HAVEN</title>
+  </head>
+  <body>
+    <nav class="nav container">
+      <a href="{% url 'index' %}" >
+        <img
+          class="nav__logo-img"
+          src="{% static 'img/logo.png' %}"
+          alt="website logo"
+        />
+      </a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="{% url 'index' %}" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="{% url 'shop' %}"class="nav__link">Shop</a>
+            </li>
+          <!--Account Deleted-->
+            </li>
+            <li class="nav__item">
+              <a href="compare.html" class="nav__link">Navbar 1</a>
+            </li>
+            <li class="nav__item">
+              <a href="login-register.html" class="nav__link">Navbar 2</a>
+            </li>
+          </ul>
+          </li>
+          <!--Extra Tabs deleted-->
+        </ul>
+        <div class="header__search">
+          <input
+            type="text"
+            placeholder="Search For Items..."
+            class="form__input"
+          />
+          <button class="search__btn">
+            <img src="{% static 'img/search.png' %}" alt="search icon" />
+          </button>
+        </div>
+      </div>
+      <div class="header__user-actions">
+        <a href="{% url 'wishlist'  %}"class="header__action-btn" title="Wishlist">
+          <img src="{% static 'img/icon-heart.png' %}" alt="" />
+          <span class="count">0</span>
+        </a>
+        <a href="{% url 'cart' %}"class="header__action-btn" title="Cart">
+          <img src="{% static 'img/icon-cart.png' %}" alt="" />
+          <span class="count">0</span>
+        </a>
+        <a href="{% url 'login' %}" class="header__action-btn" title="Login/Sign up">
+          <img src="{% static 'img/icon-acc.png' %}" alt="" />
+        </a>
+      </div>
+    </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== HOME ===============-->
+      <section class="home section--lg">
+        <div class="home__container container grid">
+          <div class="home__content">
+            <h1 class="home__title">
+              WELCOME TO<br><span style="color: rgb(206, 12, 12);">PC</span> <span style="color: white;">HAVEN</span>
+          </h1>
+            <p class="home__description">
+            The one stop shop for your PC !
+            </p>
+            <a href="{% url 'shop' %}" class="btn">Shop Now</a>
+          </div>
+          <img src="{% static 'img/home-img.jpg' %}" class="home__img" alt="hats" />
+        </div>
+      </section>
+{% load static %}
+  <!--=============== CATEGORIES ===============-->
+  <section class="categories container section">
+    <h3 class="section__title"><span>Popular</span> Categories</h3>
+    <div class="categories__container swiper">
+      <div class="swiper-wrapper">
+        <a href="shop.html" class="category__item swiper-slide">
+          <img
+            src="{% static 'img/category-1.jpg' %}"
+            alt=""
+            class="category__img"
+          />
+          <h3 class="category__title">Laptops</h3>
+        </a>
+        <a href="shop.html" class="category__item swiper-slide">
+          <img
+            src="{% static 'img/category-2.jpg' %}"
+            alt=""
+            class="category__img"
+          />
+          <h3 class="category__title">Monitors</h3>
+        </a>
+        <a href="shop.html" class="category__item swiper-slide">
+          <img
+            src="{% static 'img/category-3.jpg' %}"
+            alt=""
+            class="category__img"
+          />
+          <h3 class="category__title">Cabinet</h3>
+        </a>
+        <a href="shop.html" class="category__item swiper-slide">
+          <img
+            src="{% static 'img/category-4.jpg' %}"
+            alt=""
+            class="category__img"
+          />
+          <h3 class="category__title">Mouse</h3>
+        </a>
+        <a href="shop.html" class="category__item swiper-slide">
+          <img
+            src="{% static 'img/category-5.jpg' %}"
+            alt=""
+            class="category__img"
+          />
+          <h3 class="category__title">Ram Sticks</h3>
+        </a>
+        <a href="shop.html" class="category__item swiper-slide">
+          <img
+            src="{% static 'img/category-6.jpg' %}"
+            alt=""
+            class="category__img"
+          />
+          <h3 class="category__title">SSD</h3>
+        </a>
+      </div>
+
+      <div class="swiper-button-prev">
+        <i class="fi fi-rs-angle-left"></i>
+      </div>
+      <div class="swiper-button-next">
+        <i class="fi fi-rs-angle-right"></i>
+      </div>
+    </div>
+  </section>
+     
+  {% load static %}
+
+  <!--=============== SHOWCASE ===============-->
+  <section class="showcase section">
+    <div class="showcase__container container grid">
+      <div class="showcase__wrapper">
+        <h3 class="section__title">New Releases</h3>
+        <div class="showcase__item">
+          <a href="details.html" class="showcase__img-box">
+            <img src="{% static 'img/showcase-img-1.jpg' %}" alt="" class="showcase__img" />
+          </a>
+          <div class="showcase__content">
+            <a href="details.html">
+              <h4 class="showcase__title">Laptop 1</h4>
+            </a>
+            <div class="showcase__price flex">
+              <span class="new__price">$238.85</span>
+              <span class="old__price">$245.8</span>
+            </div>
+          </div>
+        </div>
+        <div class="showcase__item">
+          <a href="details.html" class="showcase__img-box">
+            <img src="{% static 'img/showcase-img-2.jpg' %}" alt="" class="showcase__img" />
+          </a>
+          <div class="showcase__content">
+            <a href="details.html">
+              <h4 class="showcase__title">laptop 2</h4>
+            </a>
+            <div class="showcase__price flex">
+              <span class="new__price">$238.85</span>
+              <span class="old__price">$245.8</span>
+            </div>
+          </div>
+        </div>
+        <div class="showcase__item">
+          <a href="details.html" class="showcase__img-box">
+            <img src="{% static 'img/showcase-img-3.jpg' %}" alt="" class="showcase__img" />
+          </a>
+          <div class="showcase__content">
+            <a href="details.html">
+              <h4 class="showcase__title">laptop 3</h4>
+            </a>
+            <div class="showcase__price flex">
+              <span class="new__price">$238.85</span>
+              <span class="old__price">$245.8</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <div class="divider"></div>
+<!--=============== FOOTER ===============-->
+<footer class="footer container">
+      <div class="footer__container grid">
+        <div class="footer__content">
+         
+   
+          </a>
+          <h4 class="footer__subtitle">Contact</h4>
+          <p class="footer__description">
+            <span>Address:</span> Akash @ Marian Collge , Kutikaanam
+          </p>
+          <p class="footer__description">
+            <span>Phone:</span> +123-456-7890
+          </p>
+          <p class="footer__description">
+            <span>Hours:</span> 10:00 - 18:00, Mon - Sat
+          </p>
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Follow Me</h4>
+            <div class="footer__links flex">
+              <a href="#">
+                <img
+                  src="./assets/img/icon-facebook.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-twitter.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-instagram.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-pinterest.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-youtube.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Address</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">About Us</a></li>
+            <li><a href="#" class="footer__link">Delivery Information</a></li>
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__link">Terms & Conditions</a></li>
+            <li><a href="#" class="footer__link">Contact Us</a></li>
+            <li><a href="#" class="footer__link">Support Center</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">My Account</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Sign In</a></li>
+            <li><a href="#" class="footer__link">View Cart</a></li>
+            <li><a href="#" class="footer__link">My Wishlist</a></li>
+            <li><a href="#" class="footer__link">Track My Order</a></li>
+            <li><a href="#" class="footer__link">Help</a></li>
+            <li><a href="#" class="footer__link">Order</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Secured Payed Gateways</h3>
+         <img
+  src="{% static 'img/payment-method.png' %}"
+  alt=""
+  class="payment__img"
+/>
+        </div>
+      </div>
+    
+    </footer>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
